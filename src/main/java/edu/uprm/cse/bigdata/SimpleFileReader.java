@@ -28,6 +28,12 @@ public class SimpleFileReader {
         URI fileUri = URI.create(fileName);
         // get the configuration variable
         Configuration conf = new Configuration();
+        conf.set("fs.hdfs.impl",
+                org.apache.hadoop.hdfs.DistributedFileSystem.class.getName()
+        );
+        conf.set("fs.file.impl",
+                org.apache.hadoop.fs.LocalFileSystem.class.getName()
+        );
         // get a handle the underlying hadoop file system
         FileSystem hdfs = FileSystem.get(fileUri, conf);
         InputStream dataIn = null;
