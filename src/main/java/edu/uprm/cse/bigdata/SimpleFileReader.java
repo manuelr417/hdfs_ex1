@@ -32,7 +32,9 @@ public class SimpleFileReader {
                 org.apache.hadoop.hdfs.DistributedFileSystem.class.getName()
         );
         conf.set("fs.file.impl",
-                org.apache.hadoop.fs.LocalFileSystem.class.getName()
+                // org.apache.hadoop.fs.LocalFileSystem.class.getName()
+                org.apache.hadoop.hdfs.DistributedFileSystem.class.getName()
+
         );
         // get a handle the underlying hadoop file system
         FileSystem hdfs = FileSystem.get(fileUri, conf);
