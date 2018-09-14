@@ -72,7 +72,7 @@
             <configuration>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>edu.uprm.cse.bigdata.SampleFileReader</mainClass>
+                  <mainClass>edu.uprm.cse.bigdata.SimpleFileReader</mainClass>
                 </transformer>
               </transformers>
             </configuration>
