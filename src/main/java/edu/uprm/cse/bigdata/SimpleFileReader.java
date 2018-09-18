@@ -57,5 +57,6 @@ public class SimpleFileReader {
         }
         logger.trace("Done Reading File.");
         System.exit(0);
+        // Done
     }
 }
